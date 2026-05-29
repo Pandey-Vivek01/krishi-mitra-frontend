@@ -5,6 +5,7 @@ import { BrowserRouter } from 'react-router-dom'
 import store from './redux/store'
 import './index.css'
 import App from './App.jsx'
+import "./i18n/i18n.js";
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

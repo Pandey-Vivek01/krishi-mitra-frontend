@@ -1,0 +1,33 @@
+{
+  "nav": {
+    "posts": "Posts",
+    "qa": "Q&A",
+    "weather": "Weather",
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout"
+  },
+  "landing": {
+    "tagline": "Farmer's digital companion — market prices, crop advice, and direct market access",
+    "join": "Join Now",
+    "viewPosts": "View Posts",
+    "features": "Our Features",
+    "whoAreYou": "Who Are You?",
+    "mandiTitle": "Market Prices",
+    "mandiDesc": "Check live market prices and sell your crops at the right time",
+    "advisoryTitle": "Crop Advisory",
+    "advisoryDesc": "Know which crop suits your field based on current weather conditions",
+    "expertTitle": "Expert Guidance",
+    "expertDesc": "Learn from experienced farmers and get answers to your questions",
+    "farmer": "Farmer",
+    "farmerDesc": "Check market prices, get crop advice, and learn from experts",
+    "farmerJoin": "Join as Farmer",
+    "buyer": "Buyer",
+    "buyerDesc": "Buy fresh crops directly from farmers and eliminate middlemen",
+    "buyerJoin": "Join as Buyer",
+    "expert": "Expert",
+    "expertDesc2": "Share your experience and help the next generation of farmers",
+    "expertJoin": "Join as Expert",
+    "footerTagline": "Farmer's digital companion — reaching every field in India"
+  }
+}
