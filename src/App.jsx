@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import PrivateRoute from "./components/common/PrivateRoute";
 
+import Navbar from "./components/common/Navbar";
 // Auth Pages
 import Login from "./pages/Auth/Login";
 import Signup from "./pages/Auth/Signup";
@@ -30,6 +31,8 @@ import UnansweredQA from "./pages/Expert/UnansweredQA";
 
 function App() {
   return (
+    <>
+    <Navbar />
     <Routes>
       {/* Public Routes */}
       <Route path="/" element={<Landing />} />
@@ -94,6 +97,7 @@ function App() {
         </PrivateRoute>
       } />
     </Routes>
+    </>
   );
 }
 
