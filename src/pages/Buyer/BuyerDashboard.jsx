@@ -1,28 +1,8 @@
-import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { getAllCrops } from "../../services/cropService";
 
 const BuyerDashboard = () => {
   const { user } = useSelector((state) => state.auth);
-  const [crops, setCrops] = useState([]);
-  const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    fetchRecentCrops();
-  }, []);
-
-  const fetchRecentCrops = async () => {
-    setLoading(true);
-    try {
-      const res = await getAllCrops({ limit: 6 });
-      setCrops(res.crops);
-    } catch (err) {
-      console.error(err);
-    } finally {
-      setLoading(false);
-    }
-  };
 
   return (
     <div className="min-h-screen bg-blue-50 px-6 py-10">
@@ -48,10 +28,22 @@ const BuyerDashboard = () => {
         {/* Quick Actions */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
           <Link
-            to="/buyer/crops"
-            className="bg-blue-600 text-white p-4 rounded-2xl text-center font-semibold hover:bg-blue-700 transition"
+            to="/buyer/marketplace"
+            className="bg-green-600 text-white p-4 rounded-2xl text-center font-semibold hover:bg-green-700 transition"
           >
-            🌾 Saari Fasalein
+            🛒 Marketplace
+          </Link>
+          <Link
+            to="/buyer/orders"
+            className="bg-white text-purple-700 p-4 rounded-2xl text-center font-semibold border-2 border-purple-200 hover:border-purple-500 transition"
+          >
+            📋 Mere Orders
+          </Link>
+          <Link
+            to="/chat"
+            className="bg-white text-orange-700 p-4 rounded-2xl text-center font-semibold border-2 border-orange-200 hover:border-orange-500 transition"
+          >
+            💬 Chat
           </Link>
           <Link
             to="/posts"
@@ -65,50 +57,12 @@ const BuyerDashboard = () => {
           >
             🌦️ Mausam
           </Link>
-        </div>
-
-        {/* Recent Crops */}
-        <div className="bg-white p-6 rounded-2xl shadow-sm">
-          <div className="flex items-center justify-between mb-6">
-            <h2 className="text-xl font-bold text-blue-800">
-              🌾 Taaza Fasalein
-            </h2>
-            <Link
-              to="/buyer/crops"
-              className="text-blue-600 text-sm font-medium hover:underline"
-            >
-              Sab Dekho →
-            </Link>
-          </div>
-
-          {loading ? (
-            <p className="text-center text-gray-400 py-12">Load ho raha hai...</p>
-          ) : crops.length === 0 ? (
-            <p className="text-center text-gray-400 py-12">
-              Abhi koi fasal available nahi hai
-            </p>
-          ) : (
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {crops.map((crop) => (
-                <div
-                  key={crop._id}
-                  className="border border-blue-100 p-4 rounded-2xl hover:shadow-md transition"
-                >
-                  <h3 className="font-bold text-gray-800 text-lg mb-1">
-                    {crop.name}
-                  </h3>
-                  <p className="text-blue-600 font-semibold mb-2">
-                    ₹{crop.price}/kg
-                  </p>
-                  <div className="text-sm text-gray-500 space-y-1">
-                    <p>📦 {crop.quantity} kg available</p>
-                    <p>📍 {crop.location}</p>
-                    <p>👨‍🌾 {crop.farmer?.firstName} {crop.farmer?.lastName}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          )}
+          <Link
+            to="/qa"
+            className="bg-white text-yellow-700 p-4 rounded-2xl text-center font-semibold border-2 border-yellow-200 hover:border-yellow-500 transition"
+          >
+            ❓ Sawaal Poochho
+          </Link>
         </div>
 
       </div>

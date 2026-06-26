@@ -106,6 +106,24 @@ const FarmerDashboard = () => {
           >
             ❓ Sawaal Poochein
           </Link>
+          <Link
+            to="/farmer/products/add"
+            className="bg-orange-500 text-white p-4 rounded-2xl text-center font-semibold hover:bg-orange-600 transition"
+          >
+            🛒 Fasal Becho
+          </Link>
+          <Link
+            to="/farmer/products"
+            className="bg-white text-orange-700 p-4 rounded-2xl text-center font-semibold border-2 border-orange-200 hover:border-orange-500 transition"
+          >
+            📦 Meri Listings
+          </Link>
+          <Link
+            to="/farmer/orders"
+            className="bg-white text-purple-700 p-4 rounded-2xl text-center font-semibold border-2 border-purple-200 hover:border-purple-500 transition"
+          >
+            📋 Orders Dekho
+          </Link>
         </div>
 
         {/* Recent Crops */}

@@ -4,6 +4,8 @@ import cropReducer from "./slices/cropSlice";
 import postReducer from "./slices/postSlice";
 import qaReducer from "./slices/qaSlice";
 import weatherReducer from "./slices/weatherSlice";
+import marketplaceReducer from "./slices/marketplaceSlice";
+import chatReducer from "./slices/chatSlice";
 
 const store = configureStore({
     reducer: {
@@ -12,6 +14,8 @@ const store = configureStore({
         post: postReducer,
         qa: qaReducer,
         weather: weatherReducer,
+        marketplace: marketplaceReducer,
+        chat: chatReducer,
     },
 });
 
