@@ -53,7 +53,7 @@ function App() {
           </PrivateRoute>
         } />
         <Route path="/chat" element={
-          <PrivateRoute allowedRoles={["Farmer", "Buyer"]}>
+          <PrivateRoute allowedRoles={["Farmer", "Buyer" , "Expert"]}>
             <Chat />
           </PrivateRoute>
         } />

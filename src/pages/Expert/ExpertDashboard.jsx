@@ -88,6 +88,12 @@ const ExpertDashboard = () => {
           >
             📰 Saare Posts
           </Link>
+          <Link
+             to="/chat"
+             className="bg-white text-green-700 p-4 rounded-2xl text-center font-semibold border-2 border-green-200 hover:border-green-500 transition"
+          >
+          💬 Messages
+        </Link>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

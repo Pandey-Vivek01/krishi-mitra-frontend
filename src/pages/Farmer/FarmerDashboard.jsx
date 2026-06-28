@@ -124,6 +124,12 @@ const FarmerDashboard = () => {
           >
             📋 Orders Dekho
           </Link>
+          <Link
+            to="/chat"
+            className="bg-white text-green-700 p-4 rounded-2xl text-center font-semibold border-2 border-green-200 hover:border-green-500 transition"
+          >
+          💬 Messages
+        </Link>
         </div>
 
         {/* Recent Crops */}
