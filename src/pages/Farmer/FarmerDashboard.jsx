@@ -130,8 +130,13 @@ const FarmerDashboard = () => {
           >
           💬 Messages
         </Link>
+        <Link
+         to="/mandi"
+             className="bg-white text-green-700 p-4 rounded-2xl text-center font-semibold border-2 border-green-200 hover:border-green-500 transition"
+          >
+          📊 Mandi Prices
+         </Link>
         </div>
-
         {/* Recent Crops */}
         <div className="bg-white p-6 rounded-2xl shadow-sm">
           <div className="flex items-center justify-between mb-4">

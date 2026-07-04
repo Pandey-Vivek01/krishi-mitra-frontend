@@ -13,6 +13,7 @@ import PostDetail from "./pages/Common/PostDetail";
 import QA from "./pages/Common/QA";
 import Profile from "./pages/Common/Profile";
 import Chat from "./pages/Common/Chat";
+import MandiPrices from "./pages/Common/MandiPrices";
 // Farmer Pages
 import FarmerDashboard from "./pages/Farmer/FarmerDashboard";
 import MyCrops from "./pages/Farmer/MyCrops";
@@ -47,6 +48,11 @@ function App() {
         <Route path="/qa" element={<QA />} />
 
         {/* Protected — any logged in user */}
+        <Route path="/mandi" element={
+          <PrivateRoute allowedRoles={["Farmer", "Buyer"]}>
+           <MandiPrices />
+         </PrivateRoute>
+        } />
         <Route path="/profile" element={
           <PrivateRoute allowedRoles={["Farmer", "Buyer", "Expert"]}>
             <Profile />
