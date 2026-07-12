@@ -107,6 +107,13 @@ function App() {
             <Marketplace />
           </PrivateRoute>
         } />
+               
+        <Route path="/buyer/crops" element={
+          <PrivateRoute allowedRoles={["Buyer"]}>
+            <Marketplace />
+          </PrivateRoute>
+        } />
+
         <Route path="/buyer/products/:id" element={
           <PrivateRoute allowedRoles={["Buyer"]}>
             <ProductDetail />
